@@ -9,10 +9,7 @@ import datetime
 import time
 
 # List every region you'd like to scan.  To make this script faster, keep this as short as possible
-aws_regions = ['us-east-1','us-east-2','us-west-1','us-west-2',
-'ap-northeast-1','ap-northeast-2','ap-northeast-3','ap-south-1',
-'ap-southeast-1','ap-southeast-2','ca-central-1',
-'eu-central-1','eu-west-1','eu-west-2','eu-west-3']
+aws_regions = ['us-east-1']
 
 # List of the tags on instances we want to look for to backup
 tags_to_find = ['backup', 'Backup']
@@ -21,7 +18,7 @@ tags_to_find = ['backup', 'Backup']
 default_retention_time = 7
 
 # This is the key we'll set on all AMIs we create, to detect that we are managing them
-global_key_to_tag_on = "FarleysBackupInstanceRotater"
+global_key_to_tag_on = "CESRBackupInstanceRotater"
 
 
 #####################
